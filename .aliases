@@ -1,0 +1,29 @@
+alias py='python3'
+
+alias l='ls -CF'
+alias ll='ls -lah'
+
+alias tmstmp='date -u +"%Y%m%dT%H%M%SZ"'
+
+# git
+alias ga='git add'
+alias gap='git add -p'
+alias gc='git commit'
+alias gch='git checkout'
+alias gs='git status'
+alias gsw='git show'
+alias gst='git stash'
+alias gl='git log --oneline'
+alias gd='git diff'
+alias gdn='git diff --name-only'
+alias gps='git push'
+alias gpl='git pull'
+alias grs='git reset --soft'
+alias grt='git restore'
+alias ghs='git rev-parse HEAD'
+
+# scripts
+alias grepp="$DOTFILES_DIR/scripts/grepp.sh"
+alias repo-size="$DOTFILES_DIR/scripts/repo-size.sh"
+alias docker-psp="$DOTFILES_DIR/scripts/docker-psp.sh"
+
