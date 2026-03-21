@@ -1,18 +1,21 @@
 
 source .env
+echo "Installing dotfiles from $DOTFILES_DIR"
 
-cat << EOF >> ~/.bashrc
+cat << EOF >> "$HOME/.bashrc"
 
-# dotfiles installed on $(date -u +"%Y%m%dT%H%M%SZ"), based on commit $(git rev-parse HEAD)
+# dotfiles installed on $(date -u +"%Y-%m-%d"), from $(git remote get-url origin) #$(git rev-parse --short HEAD)
 source "$DOTFILES_DIR/.env"
 EOF
-cat << 'EOF' >> ~/.bashrc
+cat << 'EOF' >> "$HOME/.bashrc"
 if [ -d $DOTFILES_DIR ]; then
-  . $DOTFILES_DIR/.env
-  . $DOTFILES_DIR/.aliases
-  ln -s ~/.vimrc $DOTFILES_DIR/.vimrc
+  . "$DOTFILES_DIR/.env"
+  . "$DOTFILES_DIR/.aliases"
 else
   printf "\e[33mWARN: %s\e[0m\n" "Could not find dotfiles directory at '$DOTFILES_DIR'"
 fi
 EOF
+echo "Remember to source $HOME/.bashrc"
+
+ln -s "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 
