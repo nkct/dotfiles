@@ -27,3 +27,4 @@ alias grepp="$DOTFILES_DIR/scripts/grepp.sh"
 alias repo-size="$DOTFILES_DIR/scripts/repo-size.sh"
 alias docker-psp="$DOTFILES_DIR/scripts/docker-psp.sh"
 
+alias tppm="$DOTFILES_DIR/install/tppm.sh"
