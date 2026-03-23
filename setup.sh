@@ -18,4 +18,5 @@ EOF
 echo "Remember to source $HOME/.bashrc"
 
 ln -s "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
+ln -s "$DOTFILES_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
 
