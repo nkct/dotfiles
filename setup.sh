@@ -20,3 +20,9 @@ echo "Remember to source $HOME/.bashrc"
 ln -s "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
 
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh" 
+find "$DOTFILES_DIR/.ssh" -maxdepth 1 -type f -print0 | while IFS= read -r -d '' f; do
+  ln -s "$f" "$HOME/.ssh/$(basename "$f")"
+done
+
