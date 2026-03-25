@@ -8,6 +8,8 @@
 
 :set spellfile=~/.vim/spell/en.utf-8.add
 
+:syntax on
+
 nnoremap <C-p> i```<Esc>o<Esc>o```<Esc>ki
 nnoremap z <C-v>
 nnoremap <C-e> <C-w>

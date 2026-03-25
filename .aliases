@@ -22,6 +22,7 @@ alias gps='git push'
 alias gpl='git pull'
 alias grs='git reset --soft'
 alias grt='git restore'
+alias grts='git restore --staged'
 alias ghs='git rev-parse HEAD'
 
 # scripts
