@@ -20,6 +20,8 @@ echo "Remember to source $HOME/.bashrc"
 
 ln -s "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
+ln -s "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+ln -s "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 
 mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh" 

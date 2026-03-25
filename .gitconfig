@@ -1,0 +1,25 @@
+[user]
+	name = Miłosz Żegota
+	email = miloszzegota@gmail.com
+
+[init]
+  defaultBranch = main
+
+[core]
+  pager = less -F -X
+  excludesfile = ~/.gitignore_global
+
+[merge]
+  tool = vimdiff
+[diff]
+  tool = vimdiff
+
+[rebase]
+  autoStash = true
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
