@@ -33,7 +33,7 @@ info() {
 }
 
 install() {
-  pkg = $1
+  pkg=$1
   if [ $# -eq 0 ]; then
     echo -e "$USAGE"
     return 0
