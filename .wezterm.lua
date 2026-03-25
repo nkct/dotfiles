@@ -20,7 +20,7 @@ config.audible_bell = 'Disabled'
 config.default_cursor_style = 'BlinkingBar'
 config.cursor_blink_rate = 500
 config.initial_cols = 104
-config.initial_rows = 22
+config.initial_rows = 21
 config.enable_scroll_bar = true
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
@@ -53,6 +53,29 @@ wezterm.on(
   end
 )
 
+config.mouse_bindings = {
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    mods = 'CTRL',
+    action = wezterm.action.OpenLinkAtMouseCursor,
+  },
+  -- Disable the 'Down' event of CTRL-Click to avoid weird program behaviors
+  {
+    event = { Down = { streak = 1, button = 'Left' } },
+    mods = 'CTRL',
+    action = wezterm.action.Nop,
+  },
+  -- Disable default click without CTRL
+  {
+    event = { Down = { streak = 1, button = 'Left' } },
+    action = wezterm.action.SelectTextAtMouseCursor("Cell"),
+  },
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    action = wezterm.action.Nop,
+  },
+}
+
 config.keys = {
   {
     key = 'w',
@@ -77,4 +100,3 @@ config.keys = {
 }
 
 return config
-
