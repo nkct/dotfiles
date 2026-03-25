@@ -16,3 +16,5 @@ nnoremap <C-e> <C-w>
 nnoremap <C-f> k/^\d\+\.<CR>gn<C-a>/^\d\+\.<CR>
 nnoremap <C-b> j/^\d\+\.<CR>NNgn<C-x>/^\d\+\.<CR>NN
 nnoremap <C-q> ciw"<C-r>""<Esc>
+nnoremap <C-b> 0i - ``<Esc>i
+
