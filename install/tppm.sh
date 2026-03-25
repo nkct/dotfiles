@@ -4,6 +4,7 @@
 # Installation scripts must expose two functions: info and install, as well as a _DEPS array variable
 
 set -euo pipefail
+cd "$(dirname "$0")"
 
 USAGE="tppm --help\n     list\n     info <PKG>\n     install <PKG>\n"
 

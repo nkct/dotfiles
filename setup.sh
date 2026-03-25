@@ -1,5 +1,6 @@
-
-source .env
+#!/bin/bash
+cd "$(dirname "$0")"
+source ".env"
 echo "Installing dotfiles from $DOTFILES_DIR"
 
 cat << EOF >> "$HOME/.bashrc"
