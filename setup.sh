@@ -24,6 +24,7 @@ ln -s "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 
 mkdir -p "$HOME/.ssh"
+mkdir -p "$HOME/.ssh/sessions"
 chmod 700 "$HOME/.ssh" 
 find "$DOTFILES_DIR/.ssh" -maxdepth 1 -type f -print0 | while IFS= read -r -d '' f; do
   ln -s "$f" "$HOME/.ssh/$(basename "$f")"
