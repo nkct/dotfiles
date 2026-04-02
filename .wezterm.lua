@@ -4,7 +4,6 @@ local config = wezterm.config_builder()
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.default_prog = { 
     [[C:\WINDOWS\system32\wsl.exe]],
-    "--distribution-id", "{d8505407-7664-4768-b9a3-5781fee81454}",
     "--cd", "~"
   }
 end

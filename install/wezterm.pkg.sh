@@ -1,7 +1,7 @@
 _DEPS=("sudo" "curl" "apt" "gpg")
 
 info() {
-  echo "wezterm - Wez's Terminal Emulator"
+  echo "wezterm - Wez's Terminal Emulator [Linux Debian]"
   echo "Adds WezTerm sources and installs as apt package."
   echo "Reference: https://wezterm.org/install/linux.html#using-the-apt-repo"
 }
@@ -12,5 +12,7 @@ install() {
   sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
   sudo apt update
   sudo apt install wezterm -y
+
+  ln -s "$DOTFILES_DIR/.wezterm.lua" "$HOME/.wezterm.lua"
 }
 
