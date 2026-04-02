@@ -5,6 +5,7 @@ echo "Installing dotfiles from $DOTFILES_DIR"
 
 cat << EOF >> "$HOME/.bashrc"
 
+# ! DOTFILES BEGIN !
 # dotfiles installed on $(date -u +"%Y-%m-%d"), from $(git remote get-url origin) #$(git rev-parse --short HEAD)
 source "$DOTFILES_DIR/.env"
 EOF
@@ -15,6 +16,7 @@ if [ -d $DOTFILES_DIR ]; then
 else
   printf "\e[33mWARN: %s\e[0m\n" "Could not find dotfiles directory at '$DOTFILES_DIR'"
 fi
+# ! DOTFILES END !
 EOF
 echo "Remember to source $HOME/.bashrc"
 
