@@ -24,6 +24,9 @@ ln -s "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 ln -s "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 
+mkdir -p "$HOME/.local/bin"
+ln -s "$DOTFILES_DIR/scripts/editor-wrapper" "$HOME/.local/bin/editor-wrapper"
+
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.ssh/sessions"
 chmod 700 "$HOME/.ssh" 
