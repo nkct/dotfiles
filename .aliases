@@ -6,6 +6,8 @@ alias tmstmp='date -u +"%Y%m%dT%H%M%SZ"'
 alias day='date -u +"%Y-%m-%d"'
 alias src-bash='source ~/.bashrc'
 alias browser='"$BROWSER"'
+alias sqlite='sqlite3'
+alias sqlite3='rlwrap sqlite3'
 
 # git
 alias ga='git add'
@@ -36,5 +38,6 @@ alias ghs='git rev-parse HEAD'
 alias grepp="$DOTFILES_DIR/scripts/grepp.sh"
 alias repo-size="$DOTFILES_DIR/scripts/repo-size.sh"
 alias docker-psp="$DOTFILES_DIR/scripts/docker-psp.sh"
+alias rlwrap="$DOTFILES_DIR/scripts/rlwrap-wrapper.sh"
 
 alias tppm="$DOTFILES_DIR/install/tppm.sh"
